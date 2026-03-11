@@ -1,6 +1,6 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'python:3.14.3-alpine3.23' } }
+    agent any
 
     environment {   
         DISABLE_AUTH = 'true'
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'building'
             }
         }
         stage('test') {
