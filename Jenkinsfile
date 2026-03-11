@@ -17,7 +17,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'building'
+                sh 'echo "building"'
             }
         }
         stage('test') {
